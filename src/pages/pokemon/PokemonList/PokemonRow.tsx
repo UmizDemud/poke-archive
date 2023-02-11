@@ -1,5 +1,6 @@
 import { FC, memo } from 'react'
 import { Link } from 'react-router-dom';
+import { typesvgs } from '../../../assets/poke-types/imports';
 import { capitalize } from '../../../utils/capitalize';
 
 type Props = {
@@ -28,7 +29,7 @@ export const PokemonRow: FC<Props> = memo(({poke}) => (
 					<span className="tooltiptext">
 						{type}
 					</span>
-					<img className="type-img" src={`/poke-types/${type}.svg`} />
+					<img className="type-img" src={typesvgs[type as keyof typeof typesvgs]} />
 				</span>
 			))}
 		</div>

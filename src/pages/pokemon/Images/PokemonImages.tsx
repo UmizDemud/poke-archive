@@ -5,6 +5,8 @@ import { typeToColor } from "../../../assets/typeToColor";
 import { toStrLeaves } from "../../../components/Pokemon/toStringLeaves";
 import { loadPoke } from "../../../features/pokemonSlice";
 import { capitalize } from "../../../utils/capitalize";
+import rightarrow from "../../../assets/icons/arrow-right.svg";
+import leftarrow from "../../../assets/icons/arrow-left.svg";
 
 export const PokemonImages = () => {
 	const { id } = useParams();
@@ -35,7 +37,7 @@ export const PokemonImages = () => {
 					style={{lineHeight: 0.5}}
 					to={`/images/${poke.id - 1}`}
 				>
-					<img width="48" height="48" src="/icons/arrow-left.svg" alt="previous page" />
+					<img width="48" height="48" src={leftarrow} alt="previous page" />
 				</Link>
 
 				<div>
@@ -50,7 +52,7 @@ export const PokemonImages = () => {
 					style={{lineHeight: 0.5}}
 					to={`/images/${poke.id + 1}`}
 				>
-					<img width="48" height="48" src="/icons/arrow-right.svg" alt="next page" />
+					<img width="48" height="48" src={rightarrow} alt="next page" />
 				</Link>
 			</div>
 			<div className="poke-gallery">

@@ -1,7 +1,9 @@
 import { FC, useState } from 'react'
+import { typesvgs } from '../../../assets/poke-types/imports';
 import { typeToColor } from '../../../assets/typeToColor'
 import { MoveDataRenderable } from '../../../pages/pokemon/types'
 import { capitalize } from '../../../utils/capitalize';
+import arrowsvg from '../../../assets/icons/basic_arrow_right.svg'
 
 type Props = {
 	move: MoveDataRenderable;
@@ -21,12 +23,12 @@ export const Move: FC<Props> = ({move, hidden}) => {
 			>
 				<h5 className="subtitle" style={{color}}>
 					<img
-						src={'/icons/basic_arrow_right.svg'}
+						src={arrowsvg}
 						alt="toggle move"
 						style={{transition: 'transform var(--t-time)', transform: open ? 'rotateZ(90deg)' : ''}}
 					/>
 					{capitalize(move.name)}
-					<img className="type-img" src={`/poke-types/${move.type.name}.svg`} />
+					<img className="type-img" src={typesvgs[move.type.name as keyof typeof typesvgs]} />
 				</h5>
 			</button>
 			<div className="moveDetails" style={{maxHeight: open ? '200vh' : '0'}}>

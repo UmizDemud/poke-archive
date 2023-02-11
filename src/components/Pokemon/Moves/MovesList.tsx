@@ -8,6 +8,9 @@ import { sorter } from '../../../utils/sorter';
 import { moveFields } from '../../../assets/moveFields';
 import { sortOptions } from '../../../assets/sortOptions';
 import { useAppSelector } from '../../../app/hooks';
+import sorticon from "../../../assets/icons/sort_icon.svg";
+import filtericon from "../../../assets/icons/filter_icon.svg";
+import { typesvgs } from '../../../assets/poke-types/imports';
 
 type Props = {
 	movesArr: M[];
@@ -71,7 +74,6 @@ export const MovesList: FC<Props> = memo(({movesArr}) => {
 
 	const [isFilterOpen, setIsFilterOpen] = useState(false);
 	const [isSortingOpen, setIsSortingOpen] = useState(false);
-console.log(filterType)
 	const isHidden = useCallback((move: MoveDataRenderable) => {
 		return filterType.damage_class[move.damage_class.name as keyof typeof filterType.damage_class]
 				&& filterType.element[move.type.name as keyof typeof filterType.element]
@@ -105,7 +107,7 @@ console.log(filterType)
 								width="30"
 								height="30"
 								className={`filter-toggle${isSortingOpen ? ' filter-toggle--open' : ''}`}
-								src="/icons/sort_icon.svg"
+								src={sorticon}
 								alt="toggle sorting"
 							/>
 						</button>
@@ -128,7 +130,7 @@ console.log(filterType)
 								width="30"
 								height="30"
 								className={`filter-toggle${isFilterOpen ? ' filter-toggle--open' : ''}`}
-								src="/icons/filter_icon.svg"
+								src={filtericon}
 								alt="toggle filters"
 							/>
 						</button>
@@ -187,7 +189,7 @@ console.log(filterType)
 								className={`filter-item${selected ? ' filter-item--selected' : ''}`}
 								width="30"
 								height="30"
-								src={`/poke-types/${element}.svg`}
+								src={typesvgs[element as keyof typeof typesvgs]}
 							/>
 							</button>
 						)

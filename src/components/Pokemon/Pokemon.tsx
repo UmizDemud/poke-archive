@@ -5,6 +5,9 @@ import { PokemonData } from "../../pages/pokemon/types";
 import { capitalize } from "../../utils/capitalize";
 import { AbilitiesList } from "./Abilities/AbilitiesList";
 import { MovesList } from "./Moves/MovesList";
+import arrowleft from '../../assets/icons/arrow-left.svg';
+import arrowright from '../../assets/icons/arrow-right.svg';
+import { typesvgs } from '../../assets/poke-types/imports';
 
 type Props = {
 	pokemon: PokemonData;
@@ -21,7 +24,7 @@ export const Pokemon: FC<Props> = memo(({pokemon}) => {
 					style={{lineHeight: 0.5, backgroundImage: `radial-gradient(${color}, ${color} 63%, #fff 65%)`}}
 					to={`/${pokemon.id - 1}`}
 				>
-					<img width="48" height="48" src="/icons/arrow-left.svg" alt="previous page" />
+					<img width="48" height="48" src={arrowleft} alt="previous page" />
 				</Link>
 
 				<h1 className="pokename">{pokemon.id} - {capitalize(pokemon.name)}</h1>
@@ -31,7 +34,7 @@ export const Pokemon: FC<Props> = memo(({pokemon}) => {
 					style={{lineHeight: 0.5, backgroundImage: `radial-gradient(${color}, ${color} 63%, #fff 65%)`}}
 					to={`/${pokemon.id + 1}`}
 				>
-					<img width="48" height="48" src="/icons/arrow-right.svg" alt="next page" />
+					<img width="48" height="48" src={arrowright} alt="next page" />
 				</Link>
 			</div>
 			<div className="showcase-area">
@@ -41,7 +44,7 @@ export const Pokemon: FC<Props> = memo(({pokemon}) => {
 							<div className="head col" style={{backgroundColor: color}}>Types</div>
 							<div className="col">
 								{pokemon.types.map(item => (
-									<img key={item.slot} className="type-img" src={`/poke-types/${item.type.name}.svg`} />
+									<img key={item.slot} className="type-img" src={typesvgs[item.type.name as keyof typeof typesvgs]} />
 								))}
 							</div>
 						</div>

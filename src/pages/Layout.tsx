@@ -3,16 +3,6 @@ import { Link, Outlet, useParams, useSearchParams } from "react-router-dom"
 import '../styles/Layout.css'
 
 export const Layout = () => {
-	const {id} = useParams();
-	const [searchParams] = useSearchParams();
-	const offset = searchParams.get('offset');
-	const limit = searchParams.get('limit');
-
-	useEffect(() => {
-		console.log(id, searchParams)
-	}, [limit, id, offset])
-	
-
 	return (
 		<>
 			<header className="main-header">
@@ -26,7 +16,7 @@ export const Layout = () => {
 					</div>
 					<ul className="nav__list">
 						<li className="nav__item">
-							<Link className="nav__link" to="#notaround">.Auth.</Link>
+							<Link className="nav__link" to="#notaround">Auth</Link>
 						</li>
 						<li className="nav__item">
 							<Link className="nav__link" to="#notaround">Moves</Link>

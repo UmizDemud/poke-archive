@@ -1,3 +1,6 @@
+import arrowleft from '../../assets/icons/arrow-left.svg';
+import arrowright from '../../assets/icons/arrow-right.svg';
+
 export const PokemonPlaceholder = () => {
 	const color = '#ccc';
 
@@ -13,7 +16,7 @@ export const PokemonPlaceholder = () => {
 					style={{lineHeight: 0.5, backgroundImage: `radial-gradient(${color}, ${color} 63%, #fff 65%)`}}
 					href="#"
 				>
-					<img width="48" height="48" src="/icons/arrow-left.svg" alt="previous page" />
+					<img width="48" height="48" src={arrowleft} alt="previous page" />
 				</a>
 
 				<h1 style={{height: '24px'}} className="placeholder pokename"></h1>
@@ -23,7 +26,7 @@ export const PokemonPlaceholder = () => {
 					style={{lineHeight: 0.5, backgroundImage: `radial-gradient(${color}, ${color} 63%, #fff 65%)`}}
 					href="#"
 				>
-					<img width="48" height="48" src="/icons/arrow-right.svg" alt="next page" />
+					<img width="48" height="48" src={arrowright} alt="next page" />
 				</a>
 			</div>
 			<div className="showcase-area">
