@@ -1,0 +1,299 @@
+#poke-sc *{
+	/*border: 1px solid black;*/
+}
+
+.pokedex {
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#pokedex-table {
+	width: 90%;
+	max-width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 16px;
+}
+
+#pokedex-table .namelink {
+	color: var(--c_primary);
+	transition: color var(--t-time);
+}
+
+#pokedex-table .namelink:hover {
+	color: var(--c_tertiary);
+}
+
+#pokedex-table .tooltiptext {
+	padding: 0.3rem;
+	line-height: 1.5;
+}
+
+#pokedex-table .tooltip {
+	line-height: 0;
+}
+
+#pokedex-table .tooltip + .tooltip {
+	margin-left: 10px;
+}
+
+#pokedex-table .head {
+	font-weight: 700;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+#pokedex-table .head:not(.col) {
+	border-bottom: 1px solid var(--c_primary);
+	padding: 0 1rem;
+}
+
+#pokedex-table .row {
+	display: flex;
+	align-items: center;
+	height: 2rem;
+}
+
+#pokedex-table .row + .row {
+	border-top: 1px solid var(--c_primary);
+}
+
+#pokedex-table .col {
+	min-width: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.placeholder {
+	background-color: var(--bc_primary-selected);
+	border-radius: 14px;
+}
+
+.header {
+	margin-bottom: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: center;
+}
+
+.btn {
+	opacity: 0.8;
+	transition: opacity 0.3s;
+}
+
+.btn:hover {
+	opacity: 1;
+} 
+
+.pokename, .pokeid {
+	width: 400px;
+	font-size: 2.66rem;
+}
+
+.showcase-area {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 4rem;
+}
+
+.showcase-area__description {
+	margin: 4rem 10% 0 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.type-img {
+	width: 24px;
+	height: 24px;
+	border-radius: 6px;
+}
+
+.type-item, .phys-item {
+	display: grid;
+	grid-template-columns: 70px 100px;
+	margin-bottom: 10px;
+}
+
+.showcase-area__visuals {
+	max-width: 400px;
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#poke-data-table {
+  display: flex;
+	flex-direction: column;
+	border-top: 1px solid #777;
+	border-bottom: 1px solid #777;
+	height: fit-content;
+	padding: 0.3rem;
+	gap: 0.3rem;
+}
+
+#poke-data-table .type-img + .type-img {
+	margin-left: 10px;
+}
+
+#poke-data-table .row {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 2rem;
+	border-top: 1px solid #777;
+	border-bottom: 1px solid #777;
+}
+
+#poke-data-table .row .col {
+	width: 50%;
+	min-width: 100px;
+  padding: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#poke-data-table .row .col + .col {
+	border-left: 1px solid #777;
+}
+
+#poke-data-table .head {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.title {
+	font-size: 2rem;
+	margin: 1rem 0;
+}
+
+.subtitle {
+	font-size: 1.33rem;
+	margin: 0.66rem 0;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.section {
+	margin-bottom: 3rem;
+}
+
+.treeContainer {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 2rem;
+	flex-wrap: wrap;
+}
+
+.subTreeContainer {
+	margin: 2rem;
+}
+
+.poke-gallery {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: 3rem;
+}
+
+.gallery-link {
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: var(--c_pimary);
+
+	transition: font-weight var(--t-time);
+}
+
+.gallery-link:hover {
+	color: var(--c_tertiary);
+}
+
+.poke-link {
+	text-decoration: underline;
+	transition: color 0.6s;
+}
+
+.poke-link:hover {
+	color: var(--c_tertiary) !important;
+}
+
+@media screen and (max-width: 734px) {
+	.header {
+		width: 100%;
+	}
+	.pokename {
+		font-size: 2rem;
+		width: unset
+	}
+
+	.showcase-area {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.showcase-area__description,
+	.showcase-area__visuals {
+		width: unset;
+	}
+
+	.showcase-area__visuals img {
+		max-width: 300px;
+	}
+
+	.showcase-area__description {
+		margin: 0 auto 1rem;
+	}
+
+	.subTreeContainer {
+		margin: 0.3rem;
+	}
+
+	.poke-gallery {
+		padding: 1rem;
+	}
+
+	.poke-gallery img {
+		max-width: 360px;
+	}
+	
+	.pokedex {
+		padding: 3rem 1rem;
+	}
+
+	#pokedex-table .col {
+		min-width: 90px;
+	}
+
+	#pokedex-table .st {
+		min-width: 15x;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.pokedex {
+		padding: 3rem 0;
+	}
+}
+

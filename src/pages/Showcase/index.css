@@ -1,0 +1,39 @@
+table {
+  border: 1px solid var(--bc_tertiary);
+  box-shadow: -7px 6px 5px 0px rgba(0,0,0,0.45);
+  border-spacing: 0.2rem;
+  padding: 0.3rem 0.2rem 0;
+  text-align: center;
+}
+
+tbody * {
+  margin: 0;
+  min-height: 56px;
+}
+
+thead > tr {
+  border-bottom: 1px solid #fffe;
+}
+
+tr > th {
+  background-color: var(--bc_tertiary);
+  transition: color var(--t-time);
+  border-bottom: 1px solid var(--c_tertiary-selected);
+  border-radius: 0 0 7px 7px;
+}
+
+th > * {
+  margin: 0.5rem 1rem;
+}
+
+tr > th:hover {
+  background-color: var(--bc_tertiary-selected);
+}
+
+th + th {
+  border-left: 1px solid var(--bc_primary);
+}
+
+tr > td:nth-child(2n) {
+  background-color: var(--bc_secondary);
+}

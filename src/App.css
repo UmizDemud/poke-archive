@@ -1,0 +1,9 @@
+#main {
+  max-width: var(--max-width);
+  min-height: 100vh;
+  padding: 5vh 5vw 10vh;
+
+  box-sizing: border-box;
+
+  background-color: var(--bc_primary);
+}

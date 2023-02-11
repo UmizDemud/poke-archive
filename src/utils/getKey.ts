@@ -1,0 +1,1 @@
+export const randomKey = () => Math.random() * Math.random() * Math.random();

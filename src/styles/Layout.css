@@ -1,0 +1,69 @@
+@import url(./Utilities.css);
+@import url(./Pokemon.css);
+
+.main-header {
+	position: sticky;
+  max-width: var(--max-width);
+	padding: 0 3rem;
+
+	box-sizing: border-box;
+
+	border-top: 1px solid var(--c_tertiary);
+	border-bottom: 1px solid var(--c_tertiary);
+	background-color: var(--bc_secondary);
+
+	color: #fff;
+}
+
+.main-header * {
+	/* border: 1px solid black; */
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__logo {
+	padding: 1rem;
+}
+
+.nav .nav__link {
+	padding: 0.66rem 1rem;
+	min-width: 100px;
+	font-weight: 700;
+	color: var(--c_secondary);
+}
+
+.nav .nav__link:hover {
+	color: var(--c_secondary-selected)
+}
+
+.nav__item + .nav__item {
+	border-left: 1px solid var(--c_primary);
+}
+
+.nav__list {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 150px;
+	background-color: var(--bc_tertiary);
+}
+
+
+@media screen and (max-width: 734px) {
+	.main-header {
+		max-width: 100%;
+		padding: 0;
+	}
+
+}

@@ -1,0 +1,100 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Color Scheme */
+  --c_primary: #000c;
+  --c_primary-selected: #000;
+  --c_secondary: #222d;
+  --c_secondary-selected: #222;
+  --c_tertiary: #444c;
+  --c_tertiary-selected: #444;
+  --bc_primary: #fcfdfc;
+  --bc_primary-selected: #dadada;
+  --bc_secondary: #bfcfbf;
+  --bc_secondary-selected: #789;
+  --bc_tertiary: #aaa9;
+  --bc_tertiary-selected: #aaa;
+  --c_blue: #02e;
+  --c_blue-selected: #02ec;
+  --c_yellow: #ec0;
+  --c_yellow-selected: #ec0c;
+  --c_red: #e20;
+  --c_red-selected: #e20c;
+
+  --c_compo-blue: #37d;
+  --c_compo-blue-selected: #37dc;
+
+  /* Transition */
+  --t-time: 0.24s;
+
+  --max-width: 1600px;
+
+
+  color-scheme: light dark;
+  color: var(--c_primary);
+  background-color: var(--bc_primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  outline: none;
+  cursor: pointer;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: 0;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
