@@ -11,7 +11,7 @@
 	max-height: 0;
 	padding: 0;
 	border: unset;
-	margin: 0 auto 1rem;
+	margin: 1rem auto;
 	border-radius: 7px;
 	background-color: var(--bc_secondary);
 	color: var(--c_primary);
@@ -31,7 +31,8 @@
 .MovesList__sortings {
 	max-height: 0;
 	position: absolute;
-	right: 6rem;
+	top: 4rem;
+	left: 0;
 	width: fit-content;
 	padding: 0;
 

@@ -7,7 +7,7 @@ import { loadPokemon } from '../../../features/pokemonSlice';
 
 export const PokemonPage = () => {
 	const { id } = useParams();
-	const idx = parseInt(id || '');
+	const idx = parseInt(id || '1');
 	const dispatch = useAppDispatch();
 	const [ready, setReady] = useState(false);
 

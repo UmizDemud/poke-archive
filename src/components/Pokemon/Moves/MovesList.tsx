@@ -82,7 +82,7 @@ export const MovesList: FC<Props> = memo(({movesArr}) => {
 
 	return (
 		<div className="MovesList">
-			<div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+			<div>
 				<h4 className="title">Moves:{' '}
 					<i className="MovesList__desc">
 						Describes the moves a pokemon is capable of learning.
@@ -111,6 +111,32 @@ export const MovesList: FC<Props> = memo(({movesArr}) => {
 								alt="toggle sorting"
 							/>
 						</button>
+						<div
+							className={`MovesList__sortings${isSortingOpen ? ' MovesList__sortings--open' : ''}`}
+						>
+							{sortOptions.map((opt) => {
+								const optAsKey = moveFields[opt] as SortBy[number];
+								const selected = sortBy.includes(optAsKey);
+								const i = sortBy.indexOf(optAsKey);
+								return (
+									<button
+										key={opt}
+										type="button"
+										onClick={() => {
+											if (selected) {
+												setSortBy(prev => prev.filter(item => item !== moveFields[opt]));
+											} else {
+												setSortBy(prev => [...prev, optAsKey])
+											}
+										}}
+										className={`sort-option${selected ? ' sort-option--selected' : ''}`}
+									>
+										<span className="sortOptOrdr">{i !== -1 ? i+1 : ''}</span>
+										{opt}
+									</button>
+								)
+							})}
+						</div>
 					</div>
 					<div className="tooltip filter-toggle-wrapper">
 						<div className="tooltiptext">
@@ -136,32 +162,6 @@ export const MovesList: FC<Props> = memo(({movesArr}) => {
 						</button>
 					</div>
 				</div>
-			</div>
-			<div
-				className={`MovesList__sortings${isSortingOpen ? ' MovesList__sortings--open' : ''}`}
-			>
-				{sortOptions.map((opt) => {
-					const optAsKey = moveFields[opt] as SortBy[number];
-					const selected = sortBy.includes(optAsKey);
-					const i = sortBy.indexOf(optAsKey);
-					return (
-						<button
-							key={opt}
-							type="button"
-							onClick={() => {
-								if (selected) {
-									setSortBy(prev => prev.filter(item => item !== moveFields[opt]));
-								} else {
-									setSortBy(prev => [...prev, optAsKey])
-								}
-							}}
-							className={`sort-option${selected ? ' sort-option--selected' : ''}`}
-						>
-							<span className="sortOptOrdr">{i !== -1 ? i+1 : ''}</span>
-							{opt}
-						</button>
-					)
-				})}
 			</div>
 			<div
 				className={`MovesList__filters${isFilterOpen ? ' MovesList__filters--open' : ''}`}
