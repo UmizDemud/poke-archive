@@ -51,8 +51,15 @@ export const PokemonsList: FC<Props> = ({defaultOffset, defaultLimit}) => {
 	return (
 		<div className="pokedex">
 			<div className="header">
-
 				<h1 className="pokedex__title">Pokedex</h1>
+				<div>
+					<div>
+
+					</div>
+					<div>
+						
+					</div>
+				</div>
 			</div>
 			<div id="pokedex-table">
 				<div className="head">

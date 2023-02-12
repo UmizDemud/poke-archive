@@ -41,9 +41,9 @@ export const Move: FC<Props> = ({move, hidden}) => {
 					</span>
 				</h6>
 				<h6>{move.accuracy ? `Accuracy: ${move.accuracy}%` : ''}</h6>
-				<h6>Target: {move.target.name}</h6>
+				<h6>Target: {move.target.name.split('-').map(str => capitalize(str)).join(' ')}</h6>
 				<h6>{`${move.effect_chance ? `Effect chance: ${move.effect_chance}%` : ''}`}</h6>
-				{desc && <p style={{padding: '1rem 1rem 0'}}>{desc}</p>}
+				{desc && <p className="moveDescription">{desc}</p>}
 			</div>
 		</div>
 	)

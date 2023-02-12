@@ -1,0 +1,23 @@
+.MovesList {
+	padding-bottom: 300px;
+}
+
+.MovesList__desc {
+	font-size: 0.9rem;
+	font-weight: 400;
+}
+
+.moveDetails {
+	padding: 0 2.5rem;
+	transition: max-height var(--t-time);
+	overflow: hidden;
+}
+
+.moveDescription {
+	padding: 1rem;
+}
+
+.moveContainer {
+	transition: max-height var(--t-time);
+	overflow: hidden;
+}

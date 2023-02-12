@@ -1,6 +1,5 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
 
   /* Color Scheme */
@@ -80,9 +79,6 @@ button {
   /* inherit font & color from ancestor */
   color: inherit;
   font: inherit;
-
-  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-  line-height: 0;
 
   /* Corrects font smoothing for webkit */
   -webkit-font-smoothing: inherit;

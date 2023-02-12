@@ -26,7 +26,7 @@ export const AbilitiesList: FC<Props> = memo(({abilitiesArr}) => {
 					}
 					return (
 						<div style={{marginTop: '1rem'}} key={abilities[key].slot}>
-							<h4 style={{padding: '0 1rem', borderBottom: '1px solid var(--bc_tertiary)'}}>
+							<h4 style={{marginBottom: '1rem',padding: '0 1rem', borderBottom: '1px solid var(--bc_tertiary)'}}>
 								{capitalize(abilities[key].name)}
 							</h4>
 							<h5>
